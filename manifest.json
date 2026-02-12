@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Republican to American Fascist Replacer",
+  "version": "1.0",
+  "description": "Replaces 'Republican' with 'American Fascist' on web pages.",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
