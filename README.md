@@ -24,6 +24,10 @@ If you find this extension useful, you can support its development on Ko-fi:
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/fearlessgeekmedia)
 
+## Example
+
+![Example of the extension in action](example.png)
+
 ## How it Works
 
 The extension uses a `MutationObserver` to watch for new content being added to the page (like in social media feeds or infinite scrolling sites) and performs a case-sensitive replacement of the target terms.
