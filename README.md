@@ -1,6 +1,6 @@
 # Republican to American Fascist Replacer
 
-A Chrome extension that automatically replaces "Republican", "GOP", and "G.O.P." with "American Fascist" on all websites you visit.
+A Chrome extension that automatically replaces terms like "Republican", "GOP", and "ICE" with "American Fascist" and "Gestapo" on all websites you visit.
 
 ## Installation Instructions
 

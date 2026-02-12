@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Republican to American Fascist Replacer",
   "version": "1.0",
-  "description": "Replaces 'Republican', 'GOP', and 'G.O.P.' with 'American Fascist' on web pages.",
+  "description": "Replaces 'Republican', 'GOP', and 'ICE' with 'American Fascist' and 'Gestapo' on web pages.",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
