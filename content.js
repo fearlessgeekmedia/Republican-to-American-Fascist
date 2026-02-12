@@ -6,7 +6,9 @@ function replaceText(node) {
       .replace(/\bRepublicans\b/g, 'American Fascists')
       .replace(/\bRepublican\b/g, 'American Fascist')
       .replace(/\brepublicans\b/g, 'american fascists')
-      .replace(/\brepublican\b/g, 'american fascist');
+      .replace(/\brepublican\b/g, 'american fascist')
+      .replace(/\bGOP\b/g, 'American Fascist')
+      .replace(/\bG\.O\.P\./g, 'American Fascist');
   }
 }
 
@@ -22,7 +24,9 @@ const observer = new MutationObserver((mutations) => {
           .replace(/\bRepublicans\b/g, 'American Fascists')
           .replace(/\bRepublican\b/g, 'American Fascist')
           .replace(/\brepublicans\b/g, 'american fascists')
-          .replace(/\brepublican\b/g, 'american fascist');
+          .replace(/\brepublican\b/g, 'american fascist')
+          .replace(/\bGOP\b/g, 'American Fascist')
+          .replace(/\bG\.O\.P\./g, 'American Fascist');
       }
     });
   });
