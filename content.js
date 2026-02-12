@@ -1,5 +1,8 @@
 function handleTextNode(textNode) {
-  textNode.nodeValue = textNode.nodeValue
+  if (!textNode.nodeValue) return;
+
+  const originalValue = textNode.nodeValue;
+  const newValue = originalValue
     .replace(/\bRepublicans\b/g, 'American Fascists')
     .replace(/\bRepublican\b/g, 'American Fascist')
     .replace(/\brepublicans\b/g, 'american fascists')
@@ -10,16 +13,28 @@ function handleTextNode(textNode) {
     .replace(/\bICE\b/g, 'Gestapo')
     .replace(/\bImmigration and Customs Enforcement\b/g, 'Gestapo')
     .replace(/\bimmigration and customs enforcement\b/g, 'Gestapo');
+
+  if (originalValue !== newValue) {
+    textNode.nodeValue = newValue;
+  }
 }
 
 function replaceText(node) {
+  // Skip editable elements and all their children
+  if (
+    node.nodeType === Node.ELEMENT_NODE &&
+    (node.tagName === "INPUT" ||
+      node.tagName === "TEXTAREA" ||
+      node.isContentEditable)
+  ) {
+    return;
+  }
+
   if (node.nodeType === Node.TEXT_NODE) {
     handleTextNode(node);
   } else {
-    const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
-    let textNode;
-    while ((textNode = walker.nextNode())) {
-      handleTextNode(textNode);
+    for (let i = 0; i < node.childNodes.length; i++) {
+      replaceText(node.childNodes[i]);
     }
   }
 }
